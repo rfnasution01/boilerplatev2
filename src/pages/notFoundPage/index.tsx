@@ -1,5 +1,5 @@
 import AlternatifErrorPage from '../alternativeErrorPage'
 
-export default function NotFoundPage() {
+export default function LoadingFallbackPage() {
   return <AlternatifErrorPage />
 }
