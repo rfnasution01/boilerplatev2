@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react'
 import { ErrorPage, MaintenancePage, NoInternetPage } from '@/routes/loadables'
 import { Outlet } from 'react-router-dom'
 import { ErrorBoundary } from './errorBoundary'
+import { Toaster } from 'react-hot-toast'
+import { useLoading } from '@/hooks/useLoading'
+import { DialogLoading } from '@/components/feedback/dialogComponents'
 
 const baseMaintenance = import.meta.env.VITE_BASE_MAINTENANCE
 
@@ -22,7 +25,7 @@ export default function MainLayout() {
     }
   }, [])
 
-  console.log(isOffline)
+  const { isLoading, setIsLoading } = useLoading()
 
   return (
     <div className="scrollbar font-jakarta h-screen w-full overflow-auto text-left text-[2rem] font-light leading-[1.6]">
@@ -35,6 +38,10 @@ export default function MainLayout() {
           <Outlet />
         </ErrorBoundary>
       )}
+
+      <Toaster position="top-right" reverseOrder={true} />
+
+      <DialogLoading isOpen={isLoading} setIsOpen={setIsLoading} />
     </div>
   )
 }
