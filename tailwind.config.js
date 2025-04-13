@@ -92,12 +92,13 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
       },
 
       // ? ----- SISTEM WARNA -----
       colors: {
         background: {
-          DEFAULT: '#ffffff', // Warna latar belakang default putih
+          DEFAULT: '#f5f5f5', // Warna latar belakang default putih
           secondary: '#F5F5DC', // Warna latar belakang sekunder (beige)
         },
         border: {
@@ -119,6 +120,7 @@ export default {
         dark: {
           DEFAULT: '#0F172A', // Warna latar belakang gelap
         },
+        placeholder: '#7A7597',
       },
 
       // ? ----- SISTEM SHADOW -----

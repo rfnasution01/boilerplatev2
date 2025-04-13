@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /* Adding Poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'); /* Adding Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap'); /* Adding Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
 
 /* Tailwind CSS directives */
 @tailwind base;
@@ -68,7 +69,7 @@
 
   html {
     /* Setting base font size to 62.5% for easier rem unit calculation (10px / 16px = 62.5%) */
-    @apply desktop:text-[37.5%] text-[37.5%];
+    @apply text-[37.5%] desktop:text-[37.5%];
   }
 
   body {

@@ -19,6 +19,12 @@ export const router = createBrowserRouter([
         path: '',
         element: <HomePage />,
       },
+      {
+        // Define a wildcard '*' route that will match any path that doesn't exist
+        // This route is used to display the NotFoundPage for undefined routes
+        path: '*',
+        element: <NotFoundPage />,
+      },
     ],
   },
   {
